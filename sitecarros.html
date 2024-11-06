@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>André Autos</title>
+    <style>
+        /* Estilos básicos */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #02006f;
+            color: #fff;
+            padding: 1em 0;
+            text-align: center;
+        }
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+            overflow: hidden;
+        }
+        .car-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin: 20px 0;
+        }
+        .car-card {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            width: calc(33.333% - 20px);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+        .car-card:hover {
+            transform: scale(1.05);
+        }
+        .car-card img {
+            width: 100%;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+        }
+        .car-details {
+            padding: 15px;
+            text-align: center;
+        }
+        .car-details h3 {
+            margin: 10px 0;
+        }
+        .car-details p {
+            color: #666;
+        }
+        .car-details .price {
+            color: #e60000;
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+        /* Estilos do formulário */
+        .contact-form {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin: 30px 0;
+        }
+        .contact-form label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .contact-form button {
+            display: inline-block;
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .contact-form button:hover {
+            background-color: #555;
+        }
+        /* Estilo responsivo */
+        @media (max-width: 768px) {
+            .car-card {
+                width: calc(50% - 20px);
+            }
+        }
+        @media (max-width: 500px) {
+            .car-card {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>André Autos</h1>
+        <p>Venha para a André Autos e encontre o carro perfeito para você!</p>
+    </header>
+
+    <div class="container">
+        <!-- Seção de Carros -->
+        <section class="car-grid">
+            <div class="car-card">
+                <img src="honda.jpg" alt="Carro 1">
+                <div class="car-details">
+                    <h3>Honda Civic Hibrido</h3>
+                    <p>Ano 2024 | Automático | 0 Km</p>
+                    <p class="price">R$ 224.900</p>
+                </div>
+            </div>
+            <div class="car-card">
+                <img src="jetta.jpg" alt="Carro 2">
+                <div class="car-details">
+                    <h3>Jetta GLI</h3>
+                    <p>Ano 2024 | Automático | 0 Km</p>
+                    <p class="price">R$ 240.900</p>
+                </div>
+            </div>
+            <div class="car-card">
+                <img src="saveiro.jpg" alt="Carro 3">
+                <div class="car-details">
+                    <h3>Saveiro Extreme</h3>
+                    <p>Ano 2024 | Manual | 0 Km</p>
+                    <p class="price">R$ 115.900</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Formulário de Contato -->
+        <section class="contact-form">
+            <h2>Entre em Contato</h2>
+            <form action="processo_contato.php" method="post">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="mensagem">Mensagem:</label>
+                <textarea id="mensagem" name="mensagem" rows="4" required></textarea>
+
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+    </div>
+
+</body>
+</html>
